@@ -70,6 +70,14 @@
         Solo Mio Movie	
     </button>   
     
+    <input type="text" id="myMessage" placeholder="Type your message here"
+       style="font-size: 24px; width: 400px;">
+
+    <button style="font-size: 24px;"
+        onclick="window.location.href='mailto:pronto2222@gmail.com?subject=Message from my website&body=' + encodeURIComponent(document.getElementById('myMessage').value)">
+        Send Email
+    </button> 
+    
     <p style="font-style: italic; font-size: 32px;">This is my first website.</p>
 
     <img src="Dolomites.png" width="200">
