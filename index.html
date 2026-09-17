@@ -226,6 +226,29 @@
                }
         }
     </script> 
+
+    <!----------------------- Java Script Emailing ---------------------------------->
+
+    <form id="contact-form">
+          <input type="text" name="visitor_name" required placeholder="Your Name">
+          <input type="email" name="visitor_email" required placeholder="Your Email">
+          <textarea name="visitor_message" required placeholder="Your Message"></textarea>
+          <button type="submit">Send</button>
+    </form>
+
+    <script>
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevents the page from reloading
+
+          // "your_service_id" and "your_template_id" come from your EmailJS dashboard
+          emailjs.sendForm('service_gsjm6zq', 'template_m0fhkfc', this)
+          .then(function() {
+          alert('Email sent successfully!');
+              }, function(error) {
+          alert('Failed to send... ' + JSON.stringify(error));
+              });
+          });
+    </script>
     <!--------------------------------------------------------->
     <br><br><br>
    
