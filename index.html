@@ -103,35 +103,39 @@
     <!-------------------- text input and send email ---------->
 
     <h2 style="font-size: 42px; margin-left: 10px; ">Contact Me</h2>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="ea6f602d-0bac-448b-9e95-074dbe5394a9">
-        <input type="text"
+    <form id="contactForm"
+          action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="ea6f602d-0bac-448b-9e95-074dbe5394a9">
+          <input type="text"
                name="From"
                placeholder="Your name"
                style="font-size: 32px; width: 500px;"
                required>
-        <br><br>
+          <br><br>
 
-        <input type="email"
-           name="Email"
-           placeholder="Your email"
-           style="font-size: 32px; width: 800px;"
-           >
+          < input type="email"
+              name="Email"
+              placeholder="Your email"
+              style="font-size: 32px; width: 800px;"
+              >
 
-        <br><br>
+          <br><br>
 
-        <textarea name="message"
+          <textarea name="message"
               placeholder="Type your message here"
               rows="6"
               style="font-size: 32px; width: 800px;"
               required></textarea>
 
-        <br><br>
+          <br><br>
 
-        <button type="submit" style="font-size: 36px;">
-            Send Email
-        </button>
+          <button type="submit" style="font-size: 36px;">
+             Send Email
+          </button>
     </form>
+
+    document.getElementById('contactForm').reset();
+    
     <hr style="border: 2px solid blue;"> 
     <!--------------------------------------------------------->
     <br><br><br>
