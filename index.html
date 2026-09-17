@@ -104,7 +104,12 @@
 
     <h2 style="font-size: 42px; margin-left: 10px; ">Contact Me</h2>
     <form id="contactForm"
-          action="https://api.web3forms.com/submit" method="POST">
+          action="https://api.web3forms.com/submit" 
+          method="POST"
+          onsubmit="setTimeout(function() {
+                  document.getElementById('contactForm').reset();
+                  }, 1000);">
+        
           <input type="hidden" name="access_key" value="ea6f602d-0bac-448b-9e95-074dbe5394a9">
         
           <input type="text"
