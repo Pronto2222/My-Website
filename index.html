@@ -228,19 +228,27 @@
     </script> 
 
     <!----------------------- Java Script Emailing ---------------------------------->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <script>
+        emailjs.init({
+            publicKey: 'pAntPMq2pXYrghNvQ'
+        });
+    </script>
+    
     <form id="contact-form">
-        <div
+        <div>
            <label for="From" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">From:</label>
            <input type="text" name="From" style="font-size: 32px; width: 800px;" required placeholder="Your Name">
         </div><br>
 
-        <div
+        <div>
            <label for="email" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">Email:</label>
            <input type="email" name="email" style="font-size: 32px; width: 800px;"  required placeholder="Your Email">
         </div><br>
         
-        <div        
+        <div>        
           <label for="message" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">Message:</label>
           <textarea name="message" style="font-size: 32px; width: 800px;"  required placeholder="Your Message"></textarea>
         </div><br>
