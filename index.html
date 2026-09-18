@@ -223,12 +223,12 @@
 
     <br>
     <!----------------------- another page ------------------------------------------>
-    <!
     <button onclick="window.location.href='order.html'"
         style="font-size: 32px;">
-        Contact Me    
+        Contact Me
+        <br>
     </button>
-    >
+    
     <!----------------------- Java Script Emailing ---------------------------------->
     
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -361,7 +361,9 @@
     <script>
         document.getElementById('order-form').addEventListener('submit', function(event) {
             event.preventDefault();
+            
             document.getElementById('date').value = new Date().toLocaleDateString('en-AU');
+            
             emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
                 .then(function() {
                     alert('Email sent successfully!');
