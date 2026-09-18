@@ -222,9 +222,15 @@
     </script> 
 
     <!----------------------- Java Script Emailing ---------------------------------->
-    
-   <form id="contact-form">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+    <script>
+        emailjs.init({
+            publicKey: 'pAntPMq2pXYrghNvQ'
+        });
+    </script>
+    
+    <form id="contact-form">
     <div>
         <label for="From"
             style="font-size: 32px; color: blue; display: inline-block; width: 150px;">
@@ -237,7 +243,6 @@
             placeholder="Your Name"
             required>
     </div>
-
     <br>
 
     <div>
@@ -252,7 +257,6 @@
             placeholder="Your Email"
             required>
     </div>
-
     <br>
 
     <div>
@@ -274,25 +278,20 @@
         Send
     </button>
 
-</form>
+    </form>
 
-<script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-
-        event.preventDefault();
-
-        emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
-
-            .then(function() {
-                alert('Email sent successfully!');
-            })
-
-            .catch(function(error) {
-                alert('Failed to send: ' + JSON.stringify(error));
-            });
-
-    });
-</script>  
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
+                .then(function() {
+                    alert('Email sent successfully!');
+                })
+                .catch(function(error) {
+                    alert('Failed to send: ' + JSON.stringify(error));
+                });
+        });
+    </script>  
     <!--------------------------------------------------------->
     <br><br><br>
    
