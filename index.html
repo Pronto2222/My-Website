@@ -230,73 +230,76 @@
             publicKey: 'pAntPMq2pXYrghNvQ'
         });
     </script>
-    
-    <div style="font-family: Arial, sans-serif; max-width: 700px;">
-        <div style="background-color: DodgerBlue; padding: 20px; text-align: center;">
-            <h2 style="color: white; margin: 0;">
-                New Website Enquiry
-            </h2>
-        </div>
+  <form id="contact-form">
 
-        <div style="padding: 20px; font-size: 18px;">
-            <p>
-                <b>Name:</b><br>
-                {{From}}
-            </p>
+    <div>
+        <label for="From"
+            style="font-size: 32px; color: blue; display: inline-block; width: 150px;">
+            From:
+        </label>
 
-            <p>
-                <b>Email:</b><br>
-                {{email}}
-            </p>
-
-            <p>
-                <b>Message:</b>
-            </p>
-
-            <div style="border: 1px solid #cccccc; padding: 15px; font-size: 18px;">
-                {{message}}
-            </div>
-
-            <br>
-
-            <p style="font-size: 14px; color: gray;">
-                    This message was sent from your website.
-            </p>
-        </div>
+        <input type="text"
+            name="From"
+            style="font-size: 32px; width: 800px;"
+            placeholder="Your Name"
+            required>
     </div>
-    
-    <form id="contact-form">
-        <div>
-           <label for="From" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">From:</label>
-           <input type="text" name="From" style="font-size: 32px; width: 800px;" placeholder="Your Name">
-        </div><br>
 
-        <div>
-           <label for="email" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">Email:</label>
-           <input type="text" name="email" style="font-size: 32px; width: 800px;" placeholder="Your Email">
-        </div><br>
-        
-        <div>        
-          <label for="message" style="font-size: 32px; color: blue; vertical-align: top; display: inline-block; width: 150px;">Message:</label>
-          <textarea name="message" style="font-size: 32px; width: 800px; rows= 6"  required placeholder="Your Message"></textarea>
-        </div><br>
-        
-        <button type="submit" style="font-size: 32px;" >Send</button>
-    </form>
+    <br>
 
-    <script>
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevents the page from reloading
+    <div>
+        <label for="email"
+            style="font-size: 32px; color: blue; display: inline-block; width: 150px;">
+            Email:
+        </label>
 
-          // "your_service_id" and "your_template_id" come from your EmailJS dashboard
-          emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
-          .then(function() {
-              alert('Email sent successfully!');
-              }, function(error) {
-              alert('Failed to send... ' + JSON.stringify(error));
-              }); 
-          });
-    </script>
+        <input type="email"
+            name="email"
+            style="font-size: 32px; width: 800px;"
+            placeholder="Your Email"
+            required>
+    </div>
+
+    <br>
+
+    <div>
+        <label for="message"
+            style="font-size: 32px; color: blue; vertical-align: top; display: inline-block; width: 150px;">
+            Message:
+        </label>
+
+        <textarea name="message"
+            rows="6"
+            style="font-size: 32px; width: 800px;"
+            placeholder="Your Message"
+            required></textarea>
+    </div>
+
+    <br>
+
+    <button type="submit" style="font-size: 32px;">
+        Send
+    </button>
+
+</form>
+
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
+
+            .then(function() {
+                alert('Email sent successfully!');
+            })
+
+            .catch(function(error) {
+                alert('Failed to send: ' + JSON.stringify(error));
+            });
+
+    });
+</script>  
     <!--------------------------------------------------------->
     <br><br><br>
    
