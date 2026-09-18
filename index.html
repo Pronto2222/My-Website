@@ -238,9 +238,10 @@
         });
     </script>
     
-    <form id="contact-form">
+    <form id="order-form">
     <input type="hidden" id="date" name="date">    
-
+    <input type="hidden" id="date" name="email">
+        
     <div>
         <label for="From"
             style="font-size: 32px; color: blue; display: inline-block; width: 180px;">
@@ -302,7 +303,7 @@
         <label for="length" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Length:</label>
         <input type="text" id="length" name="length" placeholder="e.g., 10cm"
                style="font-size: 32px; width: 800px;"  
-               oninput="calculateArea()"
+               oninput="calculateArea2()"
                required>    
     </div>
     <br>  
@@ -311,7 +312,7 @@
         <label for="width" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Width:</label>
         <input type="text" id="width" name="width" placeholder="e.g., 5cm" 
                style="font-size: 32px; width: 800px;"  
-               oninput="calculateArea()"
+               oninput="calculateArea2()"
                required>    
     </div>
     <br> 
@@ -359,9 +360,10 @@
     </form>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('order-form').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('date').value = new Date().toLocaleDateString('en-AU');
+            document.getElementById('email').value = "aghazal2222@gmail.com";
             emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
                 .then(function() {
                     alert('Email sent successfully!');
@@ -371,6 +373,22 @@
                 });
         });
     </script>  
+        <br>
+    <hr style="border: 2px solid blue;"> 
+
+    <script>
+    function calculateArea2() {
+        let length = parseFloat(document.getElementById("length").value);
+        let width = parseFloat(document.getElementById("width").value);
+
+        if (!isNaN(length) && !isNaN(width)) {
+            document.getElementById("area").value = length * width;
+        } else {
+            document.getElementById("area").value = 0;
+               }
+        }
+    </script> 
+
     <!--------------------------------------------------------->
     <br><br><br>
    
