@@ -231,6 +231,40 @@
         });
     </script>
     
+    <div style="font-family: Arial, sans-serif; max-width: 700px;">
+        <div style="background-color: DodgerBlue; padding: 20px; text-align: center;">
+            <h2 style="color: white; margin: 0;">
+                New Website Enquiry
+            </h2>
+        </div>
+
+        <div style="padding: 20px; font-size: 18px;">
+            <p>
+                <b>Name:</b><br>
+                {{From}}
+            </p>
+
+            <p>
+                <b>Email:</b><br>
+                {{email}}
+            </p>
+
+            <p>
+                <b>Message:</b>
+            </p>
+
+            <div style="border: 1px solid #cccccc; padding: 15px; font-size: 18px;">
+                {{message}}
+            </div>
+
+            <br>
+
+            <p style="font-size: 14px; color: gray;">
+                    This message was sent from your website.
+            </p>
+        </div>
+    </div>
+    
     <form id="contact-form">
         <div>
            <label for="From" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">From:</label>
