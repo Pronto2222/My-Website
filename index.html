@@ -240,7 +240,6 @@
     
     <form id="order-form">
     <input type="hidden" id="date" name="date">    
-    <!input type="hidden" id="date" name="email">
         
     <div>
         <label for="From"
@@ -303,7 +302,7 @@
         <label for="length" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Length:</label>
         <input type="text" id="length" name="length" placeholder="e.g., 10cm"
                style="font-size: 32px; width: 800px;"  
-               oninput="calculateArea2()"
+               oninput="calculateArea()"
                required>    
     </div>
     <br>  
@@ -312,7 +311,7 @@
         <label for="width" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Width:</label>
         <input type="text" id="width" name="width" placeholder="e.g., 5cm" 
                style="font-size: 32px; width: 800px;"  
-               oninput="calculateArea2()"
+               oninput="calculateArea()"
                required>    
     </div>
     <br> 
@@ -363,7 +362,6 @@
         document.getElementById('order-form').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('date').value = new Date().toLocaleDateString('en-AU');
-            <!document.getElementById('email').value = "aghazal2222@gmail.com";>
             emailjs.sendForm('service_dr1r8ij', 'template_m0fhkfc', this)
                 .then(function() {
                     alert('Email sent successfully!');
