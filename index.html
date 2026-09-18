@@ -150,7 +150,7 @@
   
       <div>
         <label for="length" style="font-size: 32px;  color: blue; display: inline-block; width: 180px;">Length:</label>
-        <input type="text" id="length" name="Length   " placeholder="e.g., 10cm"
+        <input type="text" id="length" name="length   " placeholder="e.g., 10cm"
                style="font-size: 32px; width: 800px;"  
                oninput="calculateArea()"
                required>    
@@ -168,7 +168,7 @@
         
       <div>
         <label for="thickness" style="font-size: 32px;  color: blue; display: inline-block; width: 180px;">Thickness:</label>
-        <input type="text" id="thickness" name="Thickness" placeholder="e.g., 2mm" 
+        <input type="text" id="thickness" name="thickness" placeholder="e.g., 2mm" 
                style="font-size: 32px; width: 800px;"  
                required>    
       </div>
@@ -176,7 +176,7 @@
         
       <div>
         <label for="color" style="font-size: 32px; color: blue; display: inline-block; width: 180px;">Color:</label>
-        <input type="text" id="color" name="Color    " placeholder="e.g., Matte Black" 
+        <input type="text" id="color" name="color    " placeholder="e.g., Matte Black" 
                style="font-size: 32px; width: 800px;"  
                required>    
       </div>
@@ -185,7 +185,7 @@
       <div>
         <label for="type" style="font-size: 32px; color: blue; display: inline-block; width: 180px;">Type:</label>
         <!-- You can use a dropdown select box if you have specific options -->
-        <select id="type" name="Product_Type" style="font-size: 32px;" required>
+        <select id="type" name="product_type" style="font-size: 32px;" required>
             <option value="">-- Select a Type --</option>
             <option value="Standard">Standard</option>
             <option value="Premium">Premium</option>
@@ -223,10 +223,12 @@
 
     <br>
     <!----------------------- another page ------------------------------------------>
-    <button onclick="window.location.href='contact.html'"
+    
+    <button onclick="window.location.href='order.html'"
         style="font-size: 32px;">
         Contact Me    
     </button>
+    
     <!----------------------- Java Script Emailing ---------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -245,6 +247,7 @@
 
         <input type="text"
             name="From"
+            id="From" 
             style="font-size: 32px; width: 800px;"
             placeholder="Your Name"
             required>
@@ -259,6 +262,7 @@
 
         <input type="email"
             name="carboncopy"
+            id="carboncopy"
             style="font-size: 32px; width: 800px;"
             placeholder="Your Email if you require a copy"
             >
@@ -273,6 +277,7 @@
 
         <textarea name="address"
             rows="2"
+            id="address"
             style="font-size: 32px; width: 800px;"
             placeholder="Your Address"
             ></textarea>
@@ -293,7 +298,7 @@
     
     <div>
         <label for="length" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Length:</label>
-        <input type="text" id="length" name="Length   " placeholder="e.g., 10cm"
+        <input type="text" id="length" name="length" placeholder="e.g., 10cm"
                style="font-size: 32px; width: 800px;"  
                oninput="calculateArea()"
                required>    
@@ -302,7 +307,7 @@
         
     <div>
         <label for="width" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Width:</label>
-        <input type="text" id="width" name="Width    " placeholder="e.g., 5cm" 
+        <input type="text" id="width" name="width" placeholder="e.g., 5cm" 
                style="font-size: 32px; width: 800px;"  
                oninput="calculateArea()"
                required>    
@@ -311,7 +316,7 @@
         
     <div>
         <label for="thickness" style="font-size: 32px;  color: red; display: inline-block; width: 180px;">Thickness:</label>
-        <input type="text" id="thickness" name="Thickness" placeholder="e.g., 2mm" 
+        <input type="text" id="thickness" name="thickness" placeholder="e.g., 2mm" 
                style="font-size: 32px; width: 800px;"  
                required>    
     </div>
@@ -319,7 +324,7 @@
         
     <div>
         <label for="color" style="font-size: 32px; color: red; display: inline-block; width: 180px;">Color:</label>
-        <input type="text" id="color" name="Color    " placeholder="e.g., Matte Black" 
+        <input type="text" id="color" name="color" placeholder="e.g., Matte Black" 
                style="font-size: 32px; width: 800px;"  
                required>    
     </div>
@@ -328,7 +333,7 @@
     <div>
         <label for="type" style="font-size: 32px; color: red; display: inline-block; width: 180px;">Type:</label>
         <!-- You can use a dropdown select box if you have specific options -->
-        <select id="type" name="Product_Type" style="font-size: 32px;" required>
+        <select id="type" name="product_type" style="font-size: 32px;" required>
             <option value="">-- Select a Type --</option>
             <option value="Standard">Standard</option>
             <option value="Premium">Premium</option>
