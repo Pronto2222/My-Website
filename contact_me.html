@@ -1,1 +1,44 @@
-Testing
+    <!-------------------- text input and send email ---------->
+
+    <h2 style="font-size: 42px; margin-left: 10px; ">Contact Me</h2>
+    <form id="contactForm"
+          action="https://api.web3forms.com/submit" 
+          method="POST"
+          onsubmit="setTimeout(function() {
+                  document.getElementById('contactForm').reset();
+                  }, 1000);">
+        
+          <input type="hidden" name="access_key" value="ea6f602d-0bac-448b-9e95-074dbe5394a9">
+  
+          <label for="From" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">From:</label>
+          <input type="text"
+               name="From"
+               placeholder="Your name"
+               style="font-size: 32px; width: 500px;"
+               required>
+          <br><br>
+
+         <label for="Email" style="font-size: 32px; color: blue; display: inline-block; width: 150px;">Email:</label>
+         <input type="email"
+              name="Email"
+              placeholder="Your email"
+              style="font-size: 32px; width: 800px;"
+              >
+          <br><br>
+
+          <label for="message" style="font-size: 32px; color: blue; vertical-align: top; display: inline-block; width: 150px;">Message:</label>
+          <textarea name="message"
+              placeholder="Type your message here"
+              rows="6"
+              style="font-size: 32px; width: 800px;"
+              required></textarea>
+          <br><br>
+
+          <button type="submit" style="font-size: 36px;">
+             Send Email
+          </button>
+    </form>
+
+    <hr style="border: 2px solid blue;"> 
+     
+
