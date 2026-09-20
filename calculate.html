@@ -1,0 +1,79 @@
+    <!----------------- Emailing using formspree -------------------->
+
+    <form action="https://formspree.io/f/xvkgowjl" method="POST">
+  
+      <div>
+        <label for="length" style="font-size: 32px;  color: blue; display: inline-block; width: 180px;">Length:</label>
+        <input type="text" id="length" name="length" placeholder="e.g., 10cm"
+               style="font-size: 32px; width: 800px;"  
+               oninput="calculateArea()"
+               required>    
+      </div>
+      <br>  
+        
+      <div>
+        <label for="width" style="font-size: 32px;  color: blue; display: inline-block; width: 180px;">Width:</label>
+        <input type="text" id="width" name="Width" placeholder="e.g., 5cm" 
+               style="font-size: 32px; width: 800px;"  
+               oninput="calculateArea()"
+               required>    
+      </div>
+      <br> 
+        
+      <div>
+        <label for="thickness" style="font-size: 32px;  color: blue; display: inline-block; width: 180px;">Thickness:</label>
+        <input type="text" id="thickness" name="thickness" placeholder="e.g., 2mm" 
+               style="font-size: 32px; width: 800px;"  
+               required>    
+      </div>
+      <br> 
+        
+      <div>
+        <label for="color" style="font-size: 32px; color: blue; display: inline-block; width: 180px;">Color:</label>
+        <input type="text" id="color" name="color" placeholder="e.g., Matte Black" 
+               style="font-size: 32px; width: 800px;"  
+               required>    
+      </div>
+      <br> 
+        
+      <div>
+        <label for="type" style="font-size: 32px; color: blue; display: inline-block; width: 180px;">Type:</label>
+        <!-- You can use a dropdown select box if you have specific options -->
+        <select id="type" name="product_type" style="font-size: 32px;" required>
+            <option value="">-- Select a Type --</option>
+            <option value="Standard">Standard</option>
+            <option value="Premium">Premium</option>
+            <option value="Custom">Custom</option>
+        </select>
+      </div>
+      <br>
+        
+      <div>
+        <label style="font-size: 32px; color: red; display: inline-block; width: 180px;">
+            Area:
+        </label>
+        <output id="area" name="area" style="font-size: 32px; color: red; "> 0 </output>
+      </div>  
+      <br>
+           
+      <button type="submit" style="font-size: 36px;">Submit Specifications</button>
+  
+    </form>
+    <br>
+    <hr style="border: 2px solid blue;"> 
+
+    <script>
+    function calculateArea() {
+        let length = parseFloat(document.getElementById("length").value);
+        let width = parseFloat(document.getElementById("width").value);
+
+        if (!isNaN(length) && !isNaN(width)) {
+            document.getElementById("area").value = length * width;
+        } else {
+            document.getElementById("area").value = 0;
+               }
+        }
+    </script> 
+
+    <br>
+
