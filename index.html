@@ -2,6 +2,7 @@
     <title>My First Website</title>
     <! the below few lines are do adapt everything for a mobile phone 
     <meta name="viewport" content="width=device-width, initial-scale=1.5">
+
     <style>
         h1 {
             font-size: 50px;
@@ -13,7 +14,7 @@
                 padding: 8px 10px;
             }
         }
- 
+        <!------------------------------>
         .button-scroll {
             display: flex;
             flex-wrap: nowrap;
@@ -26,6 +27,18 @@
         .button-scroll button {
             flex-shrink: 0;
             }    
+        <!------------------------------>
+        .map-row {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            }
+
+        @media (max-width: 700px) {
+        .map-row {
+            flex-direction: column;
+            }
+        }
     </style>
 </head>
        
@@ -203,14 +216,16 @@
     <!---------------------------Dolomites------------------------------>
     <p style="font-style: italic; font-size: 32px; margin-left: 10px;">This is my first website.</p>
     
-<div style="
+<div class="map-row" 
+    style="
     display: flex;
     gap: 20px;
     align-items: flex-start;">
+
     <! <div style="width: 100%; max-width: 600px; margin: 0;">> 
     
     <img src="Dolomites.png"
-         style="width: 600px; height: 300px; object-fit: cover; margin-left: 10px;">
+         style="width: 700px; height: 400px; object-fit: cover; margin-left: 10px;">
     
     <!--------------------------- Google map ------------------------------>
     <iframe
