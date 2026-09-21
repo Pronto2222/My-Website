@@ -134,7 +134,8 @@
         &nbsp; Download &nbsp;	
     </button>
     <hr style="border: 2px solid blue;">
-    
+
+<div class="button-scroll">
     <!------------------ Browse Photos ---------------------------->
     <br>
     <button style="font-size: 42px; color: yellow; margin-left: 10px; 
@@ -176,7 +177,7 @@
         &nbsp; Contact Me &nbsp;
     </button>
     <!----------------------- calculate, new page  ----------------------->
-    <br><br>
+  
     <button onclick="window.location.href='calculate.html'"
         style="
         font-size: 42px; 
@@ -188,7 +189,8 @@
         height: 60px;">
         &nbsp; Email Test &nbsp;
     </button>
-     
+</div> 
+    
     <br><br>
     <hr style="border: 2px solid blue;">     
    
@@ -209,9 +211,11 @@
           = <output name="x" for="a b" style="font-size: 32px;"></output>
     </form>
     <!---------------------------------------------->
-    <object data="rooster.wav">
-        <param name="autoplay" value="true">
-    </object>
+   
+    <audio controls>
+        <source src="rooster.wav" type="audio/wav">
+    </audio>
+
     <!---------------------------------------------->
     <pre>    
         Text in a pre element
