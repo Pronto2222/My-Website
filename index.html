@@ -8,7 +8,7 @@
             font-size: 50px;
         }
    
-        @media (max-width: 600px) {
+        @media (max-width: 700px) {
             h1 {
                 font-size: 16px;
                 padding: 8px 10px;
@@ -41,16 +41,18 @@
         @media (max-width: 700px) {
             .map-row {
                 flex-direction: column;
+                 gap: 20px;
             }    
             .map-row img {
-                width: 100%;
+                width: calc(100% - 20px);
                 max-width: 700px;
                 height: auto;
                 margin-bottom: 20px;
             }
             .map-row iframe {
-                width: 100%;
+                width: calc(100% - 20px);
                 max-width: 600px;
+                height: 400px;
                 margin-left: 10px;
             }
         }
@@ -223,7 +225,7 @@
     <br>
     <!------------------------------Sound--------------------------->
 
-    <audio controls style="width: 500px; height: 80px">
+    <audio controls style="width: 400px; height: 80px">
         <source src="rooster.wav" type="audio/wav">
     </audio>
 
