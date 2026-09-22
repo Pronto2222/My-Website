@@ -21,10 +21,16 @@
         }
    
         @media (max-width: 600px) {
-            .round-button,
-            .scroll-button {
-                width: auto;
-                padding: 5px 8px;
+            .button-scroll {
+                gap: 5px;
+                padding: 5px;
+                height: 70px;
+            }
+
+            .button-scroll button {
+                flex-shrink: 1;
+                width: auto !important;
+                min-width: 0 !important;
             }
             p {
                 font-size: 20px !important;
@@ -37,6 +43,7 @@
                 font-size: 20px !important;
                 height: 35px !important;
                 padding: 5px 2px;
+                min-width: 0;
                 width: auto;
                 margin-right: 5px;                
             }
@@ -55,14 +62,16 @@
             width: auto;
             overflow-x: scroll;
             overflow-y: hidden;
-            gap: 20px;
-            padding: 10px;
-            height: 100px;
+            gap: 5px;
+            padding: 5px;
+            height: 70px;
             align-items: center;
             }    
 
         .button-scroll button {
-            flex-shrink: 0;
+            flex-shrink: 1;
+            width: auto !important;
+            min-width: 0 !important;
             }    
 
         .map-row {
